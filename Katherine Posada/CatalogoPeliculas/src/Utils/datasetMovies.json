@@ -1,0 +1,44 @@
+[
+    {
+        "adult": false,
+        "original_language": "en",
+        "original_title": "Mad Max: Fury Road",
+        "overview": "An apocalyptic story set in the furthest reaches of our planet.",
+        "budget": 150000000,
+        "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        }
+        ]
+    },
+    {
+        "adult": false,
+        "original_language": "en",
+        "original_title": "Pelicula terror 2",
+        "overview": "An apocalyptic story set in the furthest reaches of our planet, in a stark desert.",
+        "budget": 180000,
+        "genres": [
+            {
+                "id": 18,
+                "name": "Terror"
+            },
+            {
+                "id": 12,
+                "name": "Adventure"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ]
+    }
+]
