@@ -1,0 +1,99 @@
+Resolver el taller y agregarlo a la carpeta creada con su nombre en git.
+
+1. Indique las capas en las que se dividen la arquitectura limpia.
+- Dominio 
+- Aplicación
+- Adaptadores
+- Infraestructura
+
+2. Clasifique los siguientes componentes de acuerdo a las capas de clean arquitectura:
+
+Dominio
+- Entidades
+
+Aplicación
+- Casos de Uso
+
+Adaptadores
+- Gateways
+- API's
+
+Infraestructura
+- Infraestructura
+- UI
+- Web
+- Databases
+- Dispositivos
+
+3. Describa el principio de abstracción definido en arquitecturas limpias.
+El principio de abstracción establece que las clases de las capas de adaptadores e infraestructura no deben implementar la lógica de negocio, es decir, las reglas de negocio deben implementarse en las capas donde se definen los casos de uso y las entidades
+
+4. Es posible que una capa haga referencia a una capa interna de la arquitectura?
+Si es posible, el objetivo principal es evitar que las capas internas hagan referencia a las capas externas
+
+5. Cual es la definición de API?
+Es una interfaz de aplicación programable que permite conectar de una forma estándar varios componentes tecnológicos.
+
+6. En sus propias palabras especifique acoplamiento y cohesión he indique cual es la mejor configuración que se debe mantener para que un sistema conserve los principios de arquitecturas limpias.
+Acoplamiento se define como la dependencia que tienen dos o más componentes tecnológicos dentro de un sistema y se define que se tiene alto acoplapiento en caso tal de que si modifico un componente dentro de un sistema también debo modificar los otros componentes que dependen de él.
+Cohesión se define como las relaciones lógicas que tienen dos o más componenetes dentro de un sistema sin necesariamente depender el uno del otro.
+La configuración que se debe mantener o por la que se debe procurar es alta coheción y bajo acoplamiento
+
+7. Mencione y describa las partes de los casos de uso.
+Caso de uso de aplicación
+Un Objetivo - Es la necesidad que va a resolver o la capacidad que se va a proveer, es el para qué del caso de uso
+Punto de partida - Es el punto inicial del caso de uso, cómo están los sistemas antes de iniciar el caso de uso
+Punto final - Es el estado en el que queda el sistema después de haber ocurrido el uso de la funcionalidad
+Multiples caminos para llegar de principio a fin - Son las posibles condiciones que se pueden dar para un caso de uso
+
+
+8. Diagramación de casos de uso (tiempo 40 minutos):
+
+Una   empresa   comercializadora,   desea   invertir   en  el   desarrollo   de   un   sistema orientado al  control de  las ventas de sus productos, los  requerimientos que el sistema debe satisfacer son:     
+
+A. Permitir   que   los  Vendedores  registren   las   ventas,   para   ello   deberán consultar el saldo de los productos. 
+
+B. Permitir al Jefe de Recursos Humanos administrar al personal de ventas, registrando,   actualizando   y   eliminando   a   los   diferentes   vendedores   que ingresen o salgan de la empresa.
+
+C. El Gerente de Ventas podrá consultar los siguientes reportes:
+
+Ventas diarias.
+Ventas dentro de un rango de fechas.
+Ventas de un producto en particular.
+Vendedores existentes en la empresaoVendedores que tienen una ruta a seguir.
+
+Actor -> Caso de uso
+
+Vendedor -> Consultar saldo de los productos
+Vendedor -> Registrar venta
+Vendedor -> Consultar venta
+Vendedor -> Consultar ventas
+
+Jefe RH -> Consultar vendedores
+Jefe RH -> Consultar vendedor
+Jefe RH -> Registrar vendedor
+Jefe RH -> Actualizar vendedor
+Jefe RH -> Eliminar vendedor
+
+Gerente de ventas -> Consultar reporte de ventas diarias
+Gerente de ventas -> Consultar reporte de ventas dentro de un rango de fechas
+Gerente de ventas -> Consultar ventas de un producto particular
+Gerente de ventas -> Consultar vendedores
+Gerente de ventas -> Consultar reporte de vendedores que tienen ruta a seguir
+
+
+9. Teniendo en cuenta el ejemplo anterior y luego de definir los casos de uso especifique que componentes deberia tener y en a que capa de arquitecturas limpias pertenece.
+Entidades
+- Personal
+- Vendedor
+- Jefe RH
+- Gerente de ventas
+
+Aplicación
+- Casos de uso del punto anterior
+
+Adaptadores
+- APIs que exponen la funcionalidad de los casos de uso
+
+Infraestructura
+- Interfaz web o interfaz de escritorio que mostrará la presentación del sistema
