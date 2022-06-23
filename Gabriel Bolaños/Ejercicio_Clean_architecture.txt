@@ -1,0 +1,97 @@
+Resolver el taller y agregarlo a la carpeta creada con su nombre en git.
+
+1. Indique las capas en las que se dividen la arquitectura limpia.
+    Domain - Application - Adapter - Infrastucture
+2. Clasifique los siguientes componentes de acuerdo a las capas de clean arquitectura:
+
+Domain Layer:
+    - Entidades
+Application Layer:
+    - Casos de Uso
+Adapter Layer:
+    - API's
+    - Gateways
+    -
+Infrastructure Layer:
+    - Infraestructura
+    - UI
+    - Web
+    - Databases
+    - Dispositivos
+
+3. Describa el principio de abstracción definido en arquitecturas limpias.
+    - Las capas de Adapter y la de Infrastructure no deberían definir ninguna regla de negocio.
+
+4. Es posible que una capa haga referencia a una capa interna de la arquitectura?
+    -
+5. Cual es la definición de API?
+    - Interfaz, que permite comunicaciones entre varios aplicativos. Expone información y funcionalidades a través de servicios.
+6. En sus propias palabras especifique acoplamiento y cohesión he indique cual es la mejor configuración que se debe mantener para que un sistema conserve los principios de arquitecturas limpias.
+    - Acomplamiento es el nivel de dependencia entre varias clases y la cohesión es el nivel de independencia entre clases. La mejor configuración debería ser:
+      -->> ALTA COHESIÓN Y BAJO ACOMPLAMIENTO
+7. Mencione y describa las partes de los casos de uso.
+    - Caso de Uso de Aplicacion:
+        - Actor         ->      Quien interactua con el sistema (sistema o humano).
+        - Caso de Uso   ->      La accion que se busca o el objetivo del proceso que ejecutara el actor.
+        - Relacion      ->
+        - Limites del Sistema ->
+
+8. Diagramación de casos de uso (tiempo 40 minutos):
+
+Una   empresa   comercializadora,   desea   invertir   en  el   desarrollo   de   un   sistema orientado al  control de  las ventas de sus productos,
+los  requerimientos que el sistema debe satisfacer son:
+
+    A.  Permitir   que   los  Vendedores  registren   las   ventas,   para   ello   deberán consultar el saldo de los productos.
+
+    B.  Permitir al Jefe de Recursos Humanos administrar al personal de ventas, registrando,   actualizando   y
+    eliminando   a   los   diferentes   vendedores   que ingresen o salgan de la empresa.
+
+    C.  El Gerente de Ventas podrá consultar los siguientes reportes:
+
+        Ventas diarias.
+        Ventas dentro de un rango de fechas.
+        Ventas de un producto en particular.
+        Vendedores existentes en la empresaoVendedores que tienen una ruta a seguir.
+------------------------------------------------------------------------------------------------------------------------
+    ACTORES:
+        - Usuario_Gerente
+        - Usuario_Jefe_RRHH
+        - Usuario_Vendedor
+
+    CASOS DE USO:
+        Relacionados con Usuario_Vendedor:
+            A1. Registro de ventas en sistema de información
+            A2. Consultar saldo de productos en sistema de información
+        Relacionados con Usuario_Jefe_RH:
+            B1. Crear Usuario_Vendedor.
+            B2. Actualizar Usuario_Vendedor.
+            B3. Eliminar Usuario_Vendedor.
+        Relacionados con Usuario_Gerente:
+            C1. Consultar cantidad de ventas Diarias.
+            C2. Consultar cantidad de ventas por FechaIni y FechaFin.
+            C3. Consultar cantidad de ventas por producto.
+            C4. Consultar cantidad de Usuario_Vendedor.
+------------------------------------------------------------------------------------------------------------------------
+9. Teniendo en cuenta el ejemplo anterior y luego de definir los casos de uso especifique que componentes deberia tener y en a que capa de arquitecturas limpias pertenece.
+
+    Domain Layer:
+        - Entidad Usuarios
+        - Entidad Productos
+        - Entidad Ventas
+
+    Application Layer:
+        - CRUD Ventas.
+        - CRUD Usuarios.
+        - CRUD Productos.
+        - Consultar Ventas Diarias.
+        - Consultar Cantidad de Ventas por Rango de Fecha.
+        - Consultar cantidad de ventas por producto.
+        - Consultar cantidad de Usuario_Vendedor.
+
+    Adapter Layer:
+        - API Restful que permite exponer al front-end las funciones y casos de uso de la capa de aplicacion.
+
+    Infrastructure Layer:
+        - Interfaz o aplicacion Web (front-end)
+        - Base de datos relacional para almacenar la informacion.
+
