@@ -1,0 +1,96 @@
+Resolver el taller y agregarlo a la carpeta creada con su nombre en git.
+
+1. Indique las capas en las que se dividen la arquitectura limpia.
+	Capa de dominio
+	Capa de aplicación
+	Capa de adaptadores
+	Capa de infraestructura
+
+2. Clasifique los siguientes componentes de acuerdo a las capas de clean arquitectura:
+	Entidades (capa de dominio)
+	Infraestructura (capa de infraestructura)
+	API's (Capa de adaptadores)
+	Gateways (Capa de adaptadores)
+	UI (capa de infraestructura)
+	Casos de Uso (Capa de aplicación)
+	Web (capa de infraestructura)
+	Databases (capa de infraestructura)
+	Dispositivos (capa de infraestructura)
+
+3. Describa el principio de abstracción definido en arquitecturas limpias.
+	
+	Las capas mas externas, de adaptadores e infraestructura no deben influenciar en las capas de dominio y aplicacion, ya que las primeras definen la tecnologia y las segundas las reglas de negocio.
+
+4. Es posible que una capa haga referencia a una capa interna de la arquitectura?
+	Si, pero solo una capa por arriba o por debajo de la misma.
+
+5. Cual es la definición de API?
+	Es una interfaz que permite la comunicacion entre 2 aplicaciones
+
+6. En sus propias palabras especifique acoplamiento y cohesión he indique cual es la mejor configuración que se debe mantener para que un sistema conserve los principios de arquitecturas limpias.
+	
+	El acoplamiento sirve para saber que tan relacionados estan distintos modulos de un sistema, la cohesión mide la relación funcional entre elementos de un mismo modulo. Para mantener principios de arquitecturas limpias debemos tener bajo acoplamiento y alta cohesión.
+
+7. Mencione y describa las partes de los casos de uso.
+	-Actor: quien lo usa (sistema o humano)
+	-Caso de uso: el fin para lo que se usa
+	-Relacion: Relacion entre los actores que usan el caso de uso
+	-Limites del sistema: Es el alcance del caso de uso
+
+
+8. Diagramación de casos de uso (tiempo 40 minutos):
+
+Una   empresa   comercializadora,   desea   invertir   en  el   desarrollo   de   un   sistema orientado al  control de  las ventas de sus productos, los  requerimientos que el sistema debe satisfacer son:     
+
+A. Permitir   que   los  Vendedores  registren   las   ventas,   para   ello   deberán consultar el saldo de los productos. 
+
+B. Permitir al Jefe de Recursos Humanos administrar al personal de ventas, registrando,   actualizando   y   eliminando   a   los   diferentes   vendedores   que ingresen o salgan de la empresa.
+
+C. El Gerente de Ventas podrá consultar los siguientes reportes:
+
+Ventas diarias.
+Ventas dentro de un rango de fechas.
+Ventas de un producto en particular.
+Vendedores existentes en la empresaoVendedores que tienen una ruta a seguir.
+
+	Actores:
+		-Perfil_Gerente
+		-Perfil_RRHH
+		-Perfil_Vendedor
+
+	Casos de uso:
+		costo ConsultarPrecio(producto)
+		void RegistrarVenta(usuario,producto)
+		void RegistrarVendedor(usuario)
+		void ActualizarVendedor(usuario)
+		void EliminarVendedor(usuario)
+
+		Ventas ReporteVentasDiarias(usuario)
+		ventas ReporteVentasRango(usuario)
+		Ventas ReporteProducto(usuario, producto)
+		Vendedores ReporteActivos(usuario)
+
+
+9. Teniendo en cuenta el ejemplo anterior y luego de definir los casos de uso especifique que componentes deberia tener y en a que capa de arquitecturas limpias pertenece.
+
+	Capa de dominio:
+		-Entidades de los usuario que incluya el perfil o perfiles
+		-Entidades de los productos
+		-Entidad Ventas
+
+	Capa de aplicacion:
+		-CRUD Usuarios
+		-CRUD Productos
+		-CRUD Ventas
+		-Caso de uso para reportes de ventas diarias
+		-Caso de uso para reporte de ventas por rango
+		-Caso de uso para reporte de ventas por producto 
+		-Caso de uso para reporte de usuarios con perfil vendedor
+
+	Capa de adaptadores
+		-Api Restful para exponer servicios al front end
+		-Adaptador para conexion con la base de datos
+
+	Capa de infraestructura
+		-Interfaz web o front-end
+		-Base de datos
