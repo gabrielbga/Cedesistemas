@@ -1,0 +1,70 @@
+Resolver el taller y agregarlo a la carpeta creada con su nombre en git.
+
+1. Indique las capas en las que se dividen la arquitectura limpia.
+	1. Dominio
+	2. Aplicacion
+	3. Adaptador
+	4. Infraestructura
+
+2. Clasifique los siguientes componentes de acuerdo a las capas de clean arquitectura:
+
+	Entidades (Capa de Dominio)
+	Infraestructura (Capa Infraestructura)
+	API's (Capa Adaptador)
+	Gateways (Capa Adaptador)
+	UI (Capa Infraestructura)
+	Casos de Uso (Capa Aplicacion)
+	Web (Capa Infraestructura)
+	Databases (Capa Infraestructura)
+	Dispositivos (Capa Infraestructura)
+
+
+3. Describa el principio de abstracción definido en arquitecturas limpias.
+	Las capas mas externas de la arquitectura (Infraestructura y adaptadores) no deben definir ninguna regla de negocio
+
+
+4. Es posible que una capa haga referencia a una capa interna de la arquitectura?
+	Si, solo puede hacer referencia a una capa debajo de ella y o sabe nada sobre lo que está sucediendo arriba
+
+5. Cual es la definición de API?
+	Es una interfaz que permite la comunicación con otros aplicativos, exponiendo infomación y funcionalidades. Usualmente dicha interfaz de implementa mediante servicios
+
+6. En sus propias palabras especifique acoplamiento y cohesión he indique cual es la mejor configuración que se debe mantener para que un sistema conserve los principios de arquitecturas limpias.
+	Acoplamiento:es la dependencia directa entre módulos
+	Cohesion:Cuando hay claridad del alcance definido, unos límites claros y un contenido delimitado y perfectamente ubicado
+
+	Lo indicado en la arquitectuira es tener sistemas con alta cohesion pero bajo acoplamiento
+
+7. Mencione y describa las partes de los casos de uso.
+	Caso de uso de aplicación:
+		- Actor
+		- Caso de Uso
+		- Relación
+		- Limites del sistema
+
+	Caso de uso de negocio:
+		- Solo un objetivo
+		- un solo punto de partida
+		- Un solo punto final
+		- Multiples caminos para llejar de principio a fin
+		- Especificar el comportamiento para una variedad de posibles condiciones
+		- Cada condicion puede requerir acciones específicas
+
+8. Diagramación de casos de uso (tiempo 40 minutos):
+
+Una   empresa   comercializadora,   desea   invertir   en  el   desarrollo   de   un   sistema orientado al  control de  las ventas de sus productos, los  requerimientos que el sistema debe satisfacer son:     
+
+A. Permitir   que   los  Vendedores  registren   las   ventas,   para   ello   deberán consultar el saldo de los productos. 
+
+B. Permitir al Jefe de Recursos Humanos administrar al personal de ventas, registrando,   actualizando   y   eliminando   a   los   diferentes   vendedores   que ingresen o salgan de la empresa.
+
+C. El Gerente de Ventas podrá consultar los siguientes reportes:
+
+Ventas diarias.
+Ventas dentro de un rango de fechas.
+Ventas de un producto en particular.
+Vendedores existentes en la empresaoVendedores que tienen una ruta a seguir.
+
+9. Teniendo en cuenta el ejemplo anterior y luego de definir los casos de uso especifique que componentes deberia tener y en a que capa de arquitecturas limpias pertenece.
+
+
